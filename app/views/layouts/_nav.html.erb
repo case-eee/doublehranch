@@ -12,7 +12,7 @@
   <div class="navbar-collapse collapse" id="collapsingNavbar">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <%= link_to rails_routes.grapevine_path, class: 'nav-link' do %>
+        <%= link_to rails_routes.grapevine_path, class: 'nav-link', title: "See all members", "data-toggle": "tooltip", "data-placement": "bottom" do %>
           <h1>The Grapevine</h1>
         <% end %>
       </li>
@@ -21,7 +21,7 @@
           <a class="dropdown-toggle"
              data-toggle="dropdown"
              href="#">
-            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <i class="fa fa-user-circle" title="Profile" data-toggle="tooltip" data-placement="bottom" aria-hidden="true"></i>
           </a>
           <ul class="dropdown-menu">
             <li>
@@ -61,18 +61,18 @@
 
       <% else %>
         <li class="nav-item">
-          <%= link_to rails_routes.edit_user_profile_path(current_user), class: 'nav-link' do %>
+          <%= link_to rails_routes.edit_user_profile_path(current_user), title: "Profile", class: 'nav-link', title: "=Profile", "data-toggle": "tooltip", "data-placement": "bottom" do %>
             <i class="fa fa-user-circle" aria-hidden="true"></i>
           <% end %>
         </li>
       <% end %>
       <li class="nav-item">
-        <%= link_to 'https://www.doublehranch.org/', class: 'nav-link' do %>
+        <%= link_to 'https://www.doublehranch.org/', class: 'nav-link', title: "doubleranch.org", "data-toggle": "tooltip", "data-placement": "bottom" do %>
           <%= image_tag("HHLogoGrey.svg") %>
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to rails_routes.destroy_user_session_path, method: :delete, class: 'nav-link' do %>
+        <%= link_to rails_routes.destroy_user_session_path, method: :delete,class: 'nav-link', title: "Sign Out", "data-toggle": "tooltip", "data-placement": "bottom" do %>
           <i class="fa fa-sign-out" aria-hidden="true"></i>
         <% end %>
       </li>
